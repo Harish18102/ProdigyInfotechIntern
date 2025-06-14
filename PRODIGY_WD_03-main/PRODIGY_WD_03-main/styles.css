@@ -1,0 +1,73 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+    color: #000; /* Default symbol color */
+}
+
+.cell.x {
+    color: #FF5733; /* Color for X symbol */
+}
+
+.cell.circle {
+    color: #3498DB; /* Color for O symbol */
+}
+
+.winning-message {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    color: #fff;
+}
+
+.winning-message.show {
+    display: flex;
+}
+
+/* Style change on hover */
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+/* Style change on scroll */
+.scrolled {
+    background-color: #222 !important;
+    transition: background-color 0.3s;
+}
